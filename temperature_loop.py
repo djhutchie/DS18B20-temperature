@@ -28,5 +28,7 @@ def read_temp():
         return temp_c
 	
 while True:
-	print(read_temp())	
-	time.sleep(1)
+    value = round(float(read_temp()), 1)
+
+    print(value)	
+    time.sleep(1)
