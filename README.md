@@ -1,5 +1,7 @@
 # DS18B20-temperature
 
+Various python scripts to interface the dallas 1-wire DS18B20 sensor with a Raspberry Pi.
+
 ## Wiring
 
 ```
