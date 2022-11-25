@@ -2,6 +2,7 @@ import os
 import glob
 import time
 import datetime
+import sqlite3
  
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -28,10 +29,19 @@ def read_temp():
         # temp_f = temp_c * 9.0 / 5.0 + 32.0
         return temp_c
 
+def create_sqlite_table():
+    conn = sqlite3.connect('/home/pi/DS18B20-temperature/temperature_readings.sqlite')
+    conn.execute("CREATE TABLE IF NOT EXISTS temperature_readings ( id INTEGER PRIMARY KEY, created_at DATETIME NOT NULL, temperature FLOAT NOT NULL );")
+    conn.commit()
+    conn.close()
+
 value = round(float(read_temp()), 1)
 
-f = open("/home/pi/raspicounter/ds_temp.txt", "w")
-f.write(str(value))
-f.close()
+create_sqlite_table()
+
+conn = sqlite3.connect('/home/pi/DS18B20-temperature/temperature_readings.sqlite')
+conn.execute("INSERT INTO temperature_readings values (NULL, CURRENT_TIMESTAMP, " + str(value) + ")")
+conn.commit()
+conn.close()
 
 print(value)
