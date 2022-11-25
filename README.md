@@ -20,3 +20,8 @@ ls
 cd 28-{tab}
 cat w1_slave
 ```
+
+## SQL statement
+```
+select id, datetime(created_at, 'localtime'), temperature from temperature_readings;
+```
