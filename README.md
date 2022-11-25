@@ -13,10 +13,12 @@ temperature_loop.py
 ## Wiring
 
 ```
-pinouts can be found on the web
-    pin 1 - 3.3v
-    pin 6 - GND
-    pin 7 - Data 1 wire interface (dallas)
+pinouts for the sensor can be found on the web
+
+pi pins
+    rpi pin 1 - 3.3v
+    rpi pin 6 - GND
+    rpi pin 7 - Data 1 wire interface (dallas)
 ```
 
 ## Enable the One-Wire Interface
