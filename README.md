@@ -2,14 +2,14 @@
 
 Various python scripts to interface the dallas 1-wire DS18B20 sensor with a Raspberry Pi.
 
-
+```
 temperature_db.py
     logs date and temperature to a sqlite3 db
 temperature_file.py
     logs temperature to file (for use with other applications)
 temperature_loop.py
     continuous loop outputting to screen
-
+```
 ## Wiring
 
 ```
