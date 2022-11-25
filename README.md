@@ -15,6 +15,8 @@ temperature_loop.py
 ```
 pinouts for the sensor can be found on the web
 
+not sure if it is needed, but i used a 4.7k pullup resistor between the data and vin lines
+
 pi pins
     rpi pin 1 - 3.3v
     rpi pin 6 - GND
