@@ -20,6 +20,7 @@ pi pins
     rpi pin 6 - GND
     rpi pin 7 - Data 1 wire interface (dallas)
 ```
+https://pinout.xyz/pinout/1_wire#
 
 ## Enable the One-Wire Interface
 ```
